@@ -140,7 +140,7 @@ export default function SatelliteMap() {
     if (!map) return;
 
     try {
-      const response = await fetch(`/src/data/geojson/${fileName}`);
+      const response = await fetch(`/data/geojson/${fileName}`);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
 
       const geojson = await response.json();
